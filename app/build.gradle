@@ -41,6 +41,12 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // 仅在debug包启用BlockCanary进行卡顿监控和提示的话，可以这么用
+    debugImplementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    releaseImplementation 'com.github.markzhai:blockcanary-no-op:1.5.0'
+
 }
 repositories {
     mavenCentral()
